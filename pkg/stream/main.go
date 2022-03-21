@@ -3,6 +3,14 @@ package stream
 import "sort"
 
 /*
+*	Dev By Kwonsoo
+*	Mapper
+ */
+func Mapper[T any, V any](t T, f func(r T) V) V {
+	return f(t)
+}
+
+/*
 *	Develop By Kwonsoo
 *	Map =>  Mapper And Return new Slice
  */

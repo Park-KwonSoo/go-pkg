@@ -1,5 +1,7 @@
 package stream
 
+import "sort"
+
 /*
 *	Develop By Kwonsoo
 *	Map => Return new Slice
@@ -26,4 +28,15 @@ func Filter[T any](s []T, f func(T) bool) []T {
 	}
 
 	return r
+}
+
+func SortNotChangeOrigin[T any](s []T, f func(i, j int) bool) []T {
+	rslt := make([]T, 0)
+	for i := 0; i < len(s); i++ {
+		rslt = append(rslt, s[i])
+	}
+
+	sort.Slice(rslt, f)
+
+	return rslt
 }

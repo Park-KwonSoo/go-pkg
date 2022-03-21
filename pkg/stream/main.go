@@ -4,10 +4,10 @@ import "sort"
 
 /*
 *	Develop By Kwonsoo
-*	Map => Return new Slice
+*	Map =>  Mapper And Return new Slice
  */
-func Map[T any](s []T, f func(T) T) []T {
-	r := make([]T, len(s))
+func Map[T any, V any](s []T, f func(T) V) []V {
+	r := make([]V, len(s))
 	for i, v := range s {
 		r[i] = f(v)
 	}

@@ -1,4 +1,4 @@
-package time_parshing
+package time_formatter
 
 import (
 	"time"

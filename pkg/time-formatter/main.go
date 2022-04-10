@@ -8,7 +8,7 @@ import (
 *	Dev By Kyle
 *	time을 YYYY-MM-DD HH:mm:ss로 변환
  */
-func Parse_YYMMDD_HHMMSS(t time.Time) string {
+func Parse_YYYYMMDD_HHMMSS(t time.Time) string {
 	return t.Format("2006-01-02 15:04:05")
 }
 
@@ -16,6 +16,6 @@ func Parse_YYMMDD_HHMMSS(t time.Time) string {
 *	Dev By Kyle
 *	time을 YYYY-MM-DD로 변환
  */
-func Parse_YYMMDD(t time.Time) string {
+func Parse_YYYYMMDD(t time.Time) string {
 	return t.Format("2006-01-02")
 }

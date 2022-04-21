@@ -21,13 +21,15 @@ const (
 *	한글 문자열을 초성 문자열로 변환시킨다.
  */
 func GetCHO(h string) string {
-
 	//한글문자열의 길이
 	var b bytes.Buffer
 	for _, char := range []rune(h) {
 		if char >= hangulBASE && char <= hangulEND {
 			temp := char - hangulBASE
 			b.WriteString(hangulCHO[temp/588])
+		} else {
+			//한글이 아니라면 그냥 쓰게 된다.
+			b.WriteString(string(char))
 		}
 	}
 

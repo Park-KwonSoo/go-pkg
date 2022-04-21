@@ -17,4 +17,9 @@ func TestIsChosung(t *testing.T) {
 	if rslt != "ㅅㄱ" {
 		t.Errorf(fmt.Sprintf("It's not string's chosung: %s", rslt))
 	}
+
+	rslt = hangul.GetCHO("상자, 갑")
+	if rslt != "ㅅㅈ, ㄱ" {
+		t.Errorf(fmt.Sprintf("It's not string's chosung: %s", rslt))
+	}
 }

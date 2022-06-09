@@ -12,3 +12,11 @@ func TestConcat(t *testing.T) {
 		t.Errorf("It's not concated")
 	}
 }
+
+func TestOf(t *testing.T) {
+
+	rslt := str.Of("hello", 3)
+	if rslt != "l" {
+		t.Errorf("invalid func")
+	}
+}

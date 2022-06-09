@@ -4,6 +4,10 @@ import (
 	"bytes"
 )
 
+type S struct {
+	string
+}
+
 /*
 *	Dev By Kwonsoo
 *	문자열 합치는 함수
@@ -16,4 +20,12 @@ func Concat(s ...string) string {
 	}
 
 	return b.String()
+}
+
+/*
+*	Dev By Kwonsoo
+*	문자열의 인덱스 값을 가져오는 함수
+ */
+func Of(s string, index int) string {
+	return string(s[index])
 }
